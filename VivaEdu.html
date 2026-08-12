@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VivaEdu | Login</title>
+
+    <link rel="stylesheet" href="VivaEdu.css">
+</head>
+
+<body class="pagina-login">
+
+    <main class="login-container">
+
+        <section class="login-apresentacao">
+
+            <div class="logo-login">
+                <div class="logo-simbolo">N</div>
+
+                <div>
+                    <strong>VivaEdu</strong>
+                    <span>SISTEMA ESCOLAR</span>
+                </div>
+            </div>
+
+
+            <div class="texto-apresentacao">
+
+                <span>PORTAL EDUCACIONAL</span>
+
+                <h1>
+                    Tudo da sua escola
+                    em um só lugar.
+                </h1>
+
+                <p>
+                    Acompanhe atividades, notas,
+                    frequência e comunicados
+                    de forma simples e organizada.
+                </p>
+
+            </div>
+
+
+            <div class="ilustracao">
+
+                <div class="livro livro-1"></div>
+                <div class="livro livro-2"></div>
+                <div class="planta"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="login-area">
+
+            <div class="login-card">
+
+                <div class="marca-mobile">
+                    <div class="logo-simbolo">N</div>
+                    <strong> VivaEdu</strong>
+                </div>
+
+
+                <span class="tag">
+                    ACESSO AO SISTEMA
+                </span>
+
+                <h2>
+                    Bem-vindo de volta!
+                </h2>
+
+                <p class="descricao-login">
+                    Entre com seu e-mail institucional
+                    para continuar.
+                </p>
+
+
+                <form id="formLogin">
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail institucional
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="aluno.nome@Vivaedu.com"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            1234
+                        </label>
+
+                        <div class="senha-container">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                            >
+                                ◉
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="linha-login">
+
+                        <label class="lembrar">
+
+                            <input
+                                type="checkbox"
+                                id="lembrar"
+                            >
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+
+                        </label>
+
+
+                        <button
+                            type="button"
+                            class="esqueci"
+                        >
+                            Esqueci minha senha
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                    >
+                        Entrar
+                    </button>
+
+
+                    <div
+                        id="mensagemLogin"
+                        class="mensagem-login"
+                    ></div>
+
+                </form>
+
+
+                <p class="rodape-login">
+                    Não possui uma conta?
+                    <strong>
+                        Fale com sua instituição.
+                    </strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="VivaEdujs.js"></script>
+
+</body>
+
+</html>
