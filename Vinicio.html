@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VivaEdu | Início</title>
+
+    <link rel="stylesheet" href="VivaEdu.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="marca">
+
+            <div class="logo-simbolo">
+                V
+            </div>
+
+            <div class="nome-sistema">
+                <strong>VivaEdu</strong>
+                <span>SISTEMA ESCOLAR</span>
+            </div>
+
+        </div>
+
+
+        <div class="perfil">
+
+            <div class="notificacao">
+                ♧
+            </div>
+
+            <div class="dados-perfil">
+
+                <strong id="nomeUsuario">
+                    Clara Calonassi
+                </strong>
+
+                <span>
+                    Aluno
+                </span>
+
+            </div>
+
+
+            <div
+                class="avatar"
+                id="avatar"
+            >
+                C
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="estrutura">
+
+        <aside class="menu-lateral">
+
+            <nav>
+
+                <a
+                    href="Vinicio.html"
+                    class="menu-link ativo"
+                >
+                    <span>⌂</span>
+                    Início
+                </a>
+
+
+                <a
+                    href="Vatividades.html"
+                    class="menu-link"
+                >
+                    <span>▣</span>
+                    Atividades
+                </a>
+
+
+                <a
+                    href="Vnotas.html"
+                    class="menu-link"
+                >
+                    <span>★</span>
+                    Notas
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de frequência em desenvolvimento.')"
+                >
+                    <span>✓</span>
+                    Frequência
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de avisos em desenvolvimento.')"
+                >
+                    <span>!</span>
+                    Avisos
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Configurações disponíveis em breve.')"
+                >
+                    <span>⚙</span>
+                    Configurações
+                </a>
+
+
+                <a
+                    href="VivaEdu.html"
+                    class="menu-link"
+                    onclick="sairSistema()"
+                >
+                    <span>↪</span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+
+            <section class="cabecalho-pagina">
+
+                <div>
+
+                    <span class="tag">
+                        PAINEL DO ALUNO
+                    </span>
+
+                    <h1>
+                        Olá,
+                        <span id="nomeSaudacao">
+                        Clara
+                        </span>!
+                    </h1>
+
+                    <p>
+                        Aqui está um resumo da sua vida escolar.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="data"
+                    id="dataAtual"
+                ></div>
+
+            </section>
+
+
+            <section class="cards-resumo">
+
+
+                <a
+                    href="Vnotas.html"
+                    class="card-resumo"
+                >
+
+                    <div class="icone-card verde">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Média geral
+                        </span>
+
+                        <strong>
+                            8,7
+                        </strong>
+
+                        <small>
+                            Bom desempenho
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="card-resumo"
+                    onclick="mostrarAviso('Sua frequência geral é de 92%.')"
+                >
+
+                    <div class="icone-card bege">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Frequência
+                        </span>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <small>
+                            8 faltas registradas
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="Vatividades.html"
+                    class="card-resumo"
+                >
+
+                    <div class="icone-card areia">
+                        □
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Atividades
+                        </span>
+
+                        <strong>
+                            3
+                        </strong>
+
+                        <small>
+                            pendentes
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="card-resumo"
+                    onclick="mostrarAviso('Você possui 2 novos avisos.')"
+                >
+
+                    <div class="icone-card cinza">
+                        !
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avisos
+                        </span>
+
+                        <strong>
+                            2
+                        </strong>
+
+                        <small>
+                            novos comunicados
+                        </small>
+
+                    </div>
+
+                </a>
+
+            </section>
+
+
+            <section class="paineis">
+
+
+                <div class="painel">
+
+                    <div class="cabecalho-painel">
+
+                        <div>
+
+                            <span class="tag">
+                                PRÓXIMOS PRAZOS
+                            </span>
+
+                            <h2>
+                                Atividades
+                            </h2>
+
+                        </div>
+
+                        <a href="Vatividades.html">
+                            Ver todas →
+                        </a>
+
+                    </div>
+
+
+                    <div class="atividade">
+
+                        <div class="data-atividade">
+
+                            <strong>
+                                14
+                            </strong>
+
+                            <span>
+                                AGO
+                            </span>
+
+                        </div>
+
+
+                        <div class="informacao-atividade">
+
+                            <strong>
+                                Trabalho de História
+                            </strong>
+
+                            <span>
+                                Revolução Industrial
+                            </span>
+
+                        </div>
+
+
+                        <span class="status pendente">
+                            Pendente
+                        </span>
+
+                    </div>
+
+
+                    <div class="Vatividades">
+
+                        <div class="data-atividade">
+
+                            <strong>
+                                16
+                            </strong>
+
+                            <span>
+                                AGO
+                            </span>
+
+                        </div>
+
+
+                        <div class="informacao-atividade">
+
+                            <strong>
+                                Lista de Matemática
+                            </strong>
+
+                            <span>
+                                Funções e gráficos
+                            </span>
+
+                        </div>
+
+
+                        <span class="status pendente">
+                            Pendente
+                        </span>
+
+                    </div>
+
+
+                    <div class="atividade">
+
+                        <div class="data-atividade">
+
+                            <strong>
+                                20
+                            </strong>
+
+                            <span>
+                                AGO
+                            </span>
+
+                        </div>
+
+
+                        <div class="informacao-atividade">
+
+                            <strong>
+                                Projeto de Física
+                            </strong>
+
+                            <span>
+                                Pesquisa e apresentação
+                            </span>
+
+                        </div>
+
+
+                        <span class="status entregue">
+                            Entregue
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="painel">
+
+                    <div class="cabecalho-painel">
+
+                        <div>
+
+                            <span class="tag">
+                                COMUNICADOS
+                            </span>
+
+                            <h2>
+                                Avisos recentes
+                            </h2>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            onclick="mostrarAviso('Você está vendo todos os avisos.')"
+                        >
+                            Ver todos →
+                        </a>
+
+                    </div>
+
+
+                    <div class="aviso">
+
+                        <div class="icone-aviso">
+                            !
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Reunião de pais
+                            </strong>
+
+                            <p>
+                                Confira as informações
+                                divulgadas pela escola.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="aviso">
+
+                        <div class="icone-aviso">
+                            □
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Feira de Ciências
+                            </strong>
+
+                            <p>
+                                Inscrições abertas até sexta-feira.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="aviso">
+
+                        <div class="icone-aviso">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Calendário escolar
+                            </strong>
+
+                            <p>
+                                Confira as próximas datas importantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div
+        id="notificacaoSistema"
+        class="notificacao-sistema"
+    ></div>
+
+
+    <script src="VivaEdu.js"></script>
+
+</body>
+
+</html>
