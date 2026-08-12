@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VivaEdu | Notas</title>
+
+    <link rel="stylesheet" href="VivaEdu.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="marca">
+
+            <div class="logo-simbolo">
+                V
+            </div>
+
+            <div class="nome-sistema">
+                <strong>VivaEdu</strong>
+                <span>SISTEMA ESCOLAR</span>
+            </div>
+
+        </div>
+
+
+        <div class="perfil">
+
+            <div class="notificacao">
+                ♧
+            </div>
+
+            <div class="dados-perfil">
+
+                <strong>
+                    Clara Calonassi
+                </strong>
+
+                <span>
+                    Aluno
+                </span>
+
+            </div>
+
+            <div class="avatar">
+                C
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="estrutura">
+
+        <aside class="menu-lateral">
+
+            <nav>
+
+                <a
+                    href="Vinicio.html"
+                    class="menu-link"
+                >
+                    <span>⌂</span>
+                    Início
+                </a>
+
+
+                <a
+                    href="Vatividades.html"
+                    class="menu-link"
+                >
+                    <span>▣</span>
+                    Atividades
+                </a>
+
+
+                <a
+                    href="Vnotas.html"
+                    class="menu-link ativo"
+                >
+                    <span>★</span>
+                    Notas
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de frequência em desenvolvimento.')"
+                >
+                    <span>✓</span>
+                    Frequência
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de avisos em desenvolvimento.')"
+                >
+                    <span>!</span>
+                    Avisos
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Configurações disponíveis em breve.')"
+                >
+                    <span>⚙</span>
+                    Configurações
+                </a>
+
+
+                <a
+                    href="VivaEdu.html"
+                    class="menu-link"
+                    onclick="sairSistema()"
+                >
+                    <span>↪</span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+
+            <section class="cabecalho-pagina">
+
+                <div>
+
+                    <span class="tag">
+                        DESEMPENHO
+                    </span>
+
+                    <h1>
+                        Minhas notas
+                    </h1>
+
+                    <p>
+                        Acompanhe seu desempenho
+                        por disciplina.
+                    </p>
+
+                </div>
+
+
+                <select
+                    class="seletor-bimestre"
+                    id="bimestre"
+                    onchange="alterarBimestre()"
+                >
+
+                    <option>
+                        1º Bimestre
+                    </option>
+
+                    <option selected>
+                        2º Bimestre
+                    </option>
+
+                    <option>
+                        3º Bimestre
+                    </option>
+
+                    <option>
+                        4º Bimestre
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <section class="tabela-notas">
+
+                <div class="linha-nota cabecalho-nota">
+
+                    <span>
+                        Disciplina
+                    </span>
+
+                    <span>
+                        1º Bimestre
+                    </span>
+
+                    <span>
+                        2º Bimestre
+                    </span>
+
+                    <span>
+                        Média
+                    </span>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        Matemática
+                    </strong>
+
+                    <span>
+                        8,5
+                    </span>
+
+                    <span>
+                        9,0
+                    </span>
+
+                    <strong class="media">
+                        8,7
+                    </strong>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        Português
+                    </strong>
+
+                    <span>
+                        9,0
+                    </span>
+
+                    <span>
+                        8,5
+                    </span>
+
+                    <strong class="media">
+                        8,7
+                    </strong>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        História
+                    </strong>
+
+                    <span>
+                        8,0
+                    </span>
+
+                    <span>
+                        9,2
+                    </span>
+
+                    <strong class="media">
+                        8,6
+                    </strong>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        Física
+                    </strong>
+
+                    <span>
+                        8,5
+                    </span>
+
+                    <span>
+                        9,0
+                    </span>
+
+                    <strong class="media">
+                        8,7
+                    </strong>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        Química
+                    </strong>
+
+                    <span>
+                        7,5
+                    </span>
+
+                    <span>
+                        8,0
+                    </span>
+
+                    <strong class="media">
+                        7,7
+                    </strong>
+
+                </div>
+
+
+                <div class="linha-nota">
+
+                    <strong>
+                        Inglês
+                    </strong>
+
+                    <span>
+                        9,0
+                    </span>
+
+                    <span>
+                        9,5
+                    </span>
+
+                    <strong class="media">
+                        9,2
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <section class="mensagem-desempenho">
+
+                <div class="icone-desempenho">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Parabéns! Você está com um ótimo desempenho.
+                    </strong>
+
+                    <p>
+                        Continue se dedicando aos estudos.
+                    </p>
+
+                </div>
+
+                <div class="trofeu">
+                    ★
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div
+        id="notificacaoSistema"
+        class="notificacao-sistema"
+    ></div>
+
+
+    <script src="VivaEdu.js"></script>
+
+</body>
+
+</html>
