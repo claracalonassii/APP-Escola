@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VivaEdu | Atividades</title>
+
+    <link rel="stylesheet" href="VivaEdu.css">
+</head>
+
+<body>
+
+    <header class="topo">
+
+        <div class="marca">
+
+            <div class="logo-simbolo">
+                V
+            </div>
+
+            <div class="nome-sistema">
+                <strong>VivaEdu</strong>
+                <span>SISTEMA ESCOLAR</span>
+            </div>
+
+        </div>
+
+
+        <div class="perfil">
+
+            <div class="notificacao">
+                ♧
+            </div>
+
+            <div class="dados-perfil">
+
+                <strong>
+                 Clara Calonassi
+                </strong>
+
+                <span>
+                    Aluno
+                </span>
+
+            </div>
+
+            <div class="avatar">
+                C
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="estrutura">
+
+        <aside class="menu-lateral">
+
+            <nav>
+
+                <a
+                    href="Vinicio.html"
+                    class="menu-link"
+                >
+                    <span>⌂</span>
+                    Início
+                </a>
+
+
+                <a
+                    href="Vatividades.html"
+                    class="menu-link ativo"
+                >
+                    <span>▣</span>
+                    Atividades
+                </a>
+
+
+                <a
+                    href="Vnotas.html"
+                    class="menu-link"
+                >
+                    <span>★</span>
+                    Notas
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de frequência em desenvolvimento.')"
+                >
+                    <span>✓</span>
+                    Frequência
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Página de avisos em desenvolvimento.')"
+                >
+                    <span>!</span>
+                    Avisos
+                </a>
+
+            </nav>
+
+
+            <div class="menu-final">
+
+                <a
+                    href="#"
+                    class="menu-link"
+                    onclick="mostrarAviso('Configurações disponíveis em breve.')"
+                >
+                    <span>⚙</span>
+                    Configurações
+                </a>
+
+
+                <a
+                    href="VivaEdu.html"
+                    class="menu-link"
+                    onclick="sairSistema()"
+                >
+                    <span>↪</span>
+                    Sair
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+
+            <section class="cabecalho-pagina">
+
+                <div>
+
+                    <span class="tag">
+                        ESTUDOS
+                    </span>
+
+                    <h1>
+                        Minhas atividades
+                    </h1>
+
+                    <p>
+                        Acompanhe suas tarefas,
+                        trabalhos e prazos.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="filtros">
+
+                <div class="filtro-botoes">
+
+                    <button
+                        class="filtro ativo"
+                        onclick="filtrarAtividades('todas', this)"
+                    >
+                        Todas
+                    </button>
+
+                    <button
+                        class="filtro"
+                        onclick="filtrarAtividades('pendente', this)"
+                    >
+                        Pendentes
+                    </button>
+
+                    <button
+                        class="filtro"
+                        onclick="filtrarAtividades('entregue', this)"
+                    >
+                        Entregues
+                    </button>
+
+                </div>
+
+
+                <div class="pesquisa">
+
+                    <input
+                        type="text"
+                        id="pesquisaAtividade"
+                        placeholder="Buscar atividade..."
+                    >
+
+                    <button
+                        onclick="buscarAtividade()"
+                    >
+                        ⌕
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section
+                class="lista-atividades"
+                id="listaAtividades"
+            >
+
+
+                <article
+                    class="atividade-completa"
+                    data-status="pendente"
+                >
+
+                    <div class="icone-materia historia">
+                        H
+                    </div>
+
+
+                    <div class="dados-atividade-completa">
+
+                        <strong>
+                            Trabalho de História
+                        </strong>
+
+                        <span>
+                            Revolução Industrial
+                        </span>
+
+                    </div>
+
+
+                    <div class="prazo">
+
+                        <small>
+                            ENTREGA
+                        </small>
+
+                        <strong>
+                            14/08/2026
+                        </strong>
+
+                    </div>
+
+
+                    <span class="status pendente">
+                        Pendente
+                    </span>
+
+
+                    <button
+                        class="botao-ver"
+                        onclick="mostrarAviso('Trabalho de História selecionado.')"
+                    >
+                        Ver atividade
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="atividade-completa"
+                    data-status="pendente"
+                >
+
+                    <div class="icone-materia matematica">
+                        M
+                    </div>
+
+
+                    <div class="dados-atividade-completa">
+
+                        <strong>
+                            Lista de Matemática
+                        </strong>
+
+                        <span>
+                            Funções e gráficos
+                        </span>
+
+                    </div>
+
+
+                    <div class="prazo">
+
+                        <small>
+                            ENTREGA
+                        </small>
+
+                        <strong>
+                            16/08/2026
+                        </strong>
+
+                    </div>
+
+
+                    <span class="status pendente">
+                        Pendente
+                    </span>
+
+
+                    <button
+                        class="botao-ver"
+                        onclick="mostrarAviso('Lista de Matemática selecionada.')"
+                    >
+                        Ver atividade
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="atividade-completa"
+                    data-status="entregue"
+                >
+
+                    <div class="icone-materia fisica">
+                        F
+                    </div>
+
+
+                    <div class="dados-atividade-completa">
+
+                        <strong>
+                            Projeto de Física
+                        </strong>
+
+                        <span>
+                            Pesquisa e apresentação
+                        </span>
+
+                    </div>
+
+
+                    <div class="prazo">
+
+                        <small>
+                            ENTREGA
+                        </small>
+
+                        <strong>
+                            20/08/2026
+                        </strong>
+
+                    </div>
+
+
+                    <span class="status entregue">
+                        Entregue
+                    </span>
+
+
+                    <button
+                        class="botao-ver"
+                        onclick="mostrarAviso('Projeto de Física já foi entregue.')"
+                    >
+                        Ver atividade
+                    </button>
+
+                </article>
+
+
+                <article
+                    class="atividade-completa"
+                    data-status="entregue"
+                >
+
+                    <div class="icone-materia portugues">
+                        P
+                    </div>
+
+
+                    <div class="dados-atividade-completa">
+
+                        <strong>
+                            Leitura de Português
+                        </strong>
+
+                        <span>
+                            Interpretação de texto
+                        </span>
+
+                    </div>
+
+
+                    <div class="prazo">
+
+                        <small>
+                            ENTREGA
+                        </small>
+
+                        <strong>
+                            28/08/2026
+                        </strong>
+
+                    </div>
+
+
+                    <span class="status entregue">
+                        Entregue
+                    </span>
+
+
+                    <button
+                        class="botao-ver"
+                        onclick="mostrarAviso('Atividade de Português já foi entregue.')"
+                    >
+                        Ver atividade
+                    </button>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div
+        id="notificacaoSistema"
+        class="notificacao-sistema"
+    ></div>
+
+
+    <script src="VivaEdu.js"></script>
+
+</body>
+
+</html>
