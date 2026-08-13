@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>VivaEdu | Login</title>
 
     <link rel="stylesheet" href="VivaEdu.css">
@@ -25,9 +24,7 @@
                 </div>
             </div>
 
-
             <div class="texto-apresentacao">
-
                 <span>PORTAL EDUCACIONAL</span>
 
                 <h1>
@@ -36,20 +33,15 @@
                 </h1>
 
                 <p>
-                    Acompanhe atividades, notas,
-                    frequência e comunicados
+                    Acompanhe atividades e notas
                     de forma simples e organizada.
                 </p>
-
             </div>
 
-
             <div class="ilustracao">
-
                 <div class="livro livro-1"></div>
                 <div class="livro livro-2"></div>
                 <div class="planta"></div>
-
             </div>
 
         </section>
@@ -59,39 +51,30 @@
 
             <div class="login-card">
 
-                <div class="marca-mobile">
-                    <div class="logo-simbolo">N</div>
-                    <strong> VivaEdu</strong>
-                </div>
-
-
                 <span class="tag">
                     ACESSO AO SISTEMA
                 </span>
 
-                <h2>
-                    Bem-vindo de volta!
-                </h2>
+                <h2>Bem-vindo!</h2>
 
                 <p class="descricao-login">
-                    Entre com seu e-mail institucional
-                    para continuar.
+                    Entre com seu e-mail e senha para continuar.
                 </p>
-
 
                 <form id="formLogin">
 
                     <div class="campo">
 
                         <label for="email">
-                            E-mail institucional
+                            E-mail
                         </label>
 
                         <input
                             type="email"
                             id="email"
-                            placeholder="aluno.nome@escola.pr.gov.br"
+                            placeholder="seunome@escola.pr.gov.br"
                             autocomplete="off"
+                            required
                         >
 
                     </div>
@@ -99,7 +82,7 @@
 
                     <div class="campo">
 
-                        <label for="1234">
+                        <label for="senha">
                             Senha
                         </label>
 
@@ -108,7 +91,12 @@
                             <input
                                 type="password"
                                 id="senha"
-                                placeholder="Digite sua senha"
+                                placeholder="Digite 6 números"
+                                maxlength="6"
+                                minlength="6"
+                                inputmode="numeric"
+                                pattern="[0-9]{6}"
+                                required
                             >
 
                             <button
@@ -119,32 +107,6 @@
                             </button>
 
                         </div>
-
-                    </div>
-
-
-                    <div class="linha-login">
-
-                        <label class="lembrar">
-
-                            <input
-                                type="checkbox"
-                                id="lembrar"
-                            >
-
-                            <span>
-                                Lembrar de mim
-                            </span>
-
-                        </label>
-
-
-                        <button
-                            type="button"
-                            class="esqueci"
-                        >
-                            Esqueci minha senha
-                        </button>
 
                     </div>
 
@@ -165,11 +127,12 @@
                 </form>
 
 
-                <p class="rodape-login">
-                    Não possui uma conta?
-                    <strong>
-                        Fale com sua instituição.
-                    </strong>
+                <p class="cadastro-link">
+                    Ainda não possui uma conta?
+
+                    <a href="Vcadastro.html">
+                        Criar conta
+                    </a>
                 </p>
 
             </div>
@@ -178,8 +141,7 @@
 
     </main>
 
-
-    <script src="VivaEdujs.js"></script>
+    <script src="VivaEdu.js"></script>
 
 </body>
 
