@@ -1,5 +1,3 @@
-
-
 :root {
     --fundo: #f5f2ed;
     --branco: #fffdf9;
@@ -11,9 +9,8 @@
     --bege-escuro: #ddd4c7;
     --linha: #e5ded5;
     --vermelho: #a65d59;
-    --sombra: 0 12px 35px rgba(54, 48, 39, 0.07);
+    --sombra: 0 8px 25px rgba(54, 48, 39, 0.06);
 }
-
 
 * {
     margin: 0;
@@ -21,19 +18,16 @@
     box-sizing: border-box;
 }
 
-
 body {
     background: var(--fundo);
     color: var(--texto);
-    font-family: "DM Sans", sans-serif;
+    font-family: Arial, sans-serif;
 }
-
 
 a {
     color: inherit;
     text-decoration: none;
 }
-
 
 button,
 input,
@@ -42,759 +36,458 @@ select {
 }
 
 
-
-
 .pagina-login {
     min-height: 100vh;
 }
 
-
 .login-container {
     min-height: 100vh;
-
     display: grid;
-
-    grid-template-columns: 38% 62%;
+    grid-template-columns: 40% 60%;
 }
 
-
 .login-apresentacao {
-    position: relative;
-
-    overflow: hidden;
-
     background: #748374;
-
     color: white;
-
-    padding: 55px;
-
+    padding: 45px;
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
 }
 
-
 .logo-login {
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 }
 
-
 .logo-login strong {
     display: block;
-
-    font-family: "Playfair Display", serif;
-
+    font-family: Georgia, serif;
     font-size: 24px;
 }
 
-
 .logo-login span {
     display: block;
-
     font-size: 9px;
-
-    letter-spacing: 1.7px;
-
+    letter-spacing: 1.5px;
     opacity: .8;
 }
-
 
 .logo-simbolo {
     width: 44px;
     height: 44px;
-
-    border-radius: 13px;
-
+    border-radius: 12px;
     background: rgba(255,255,255,.18);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-size: 20px;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .texto-apresentacao {
-    max-width: 430px;
+    max-width: 400px;
 }
-
 
 .texto-apresentacao > span {
     font-size: 10px;
-
     letter-spacing: 2px;
-
     opacity: .75;
 }
 
-
 .texto-apresentacao h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(38px, 4vw, 58px);
-
-    line-height: 1.05;
-
-    margin: 16px 0;
+    font-family: Georgia, serif;
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 15px 0;
 }
 
-
 .texto-apresentacao p {
-    max-width: 360px;
-
-    line-height: 1.7;
-
+    max-width: 350px;
+    line-height: 1.6;
     opacity: .8;
 }
 
-
 .ilustracao {
-    height: 170px;
-
+    height: 120px;
     position: relative;
 }
 
-
 .livro {
     position: absolute;
-
-    width: 230px;
-    height: 38px;
-
-    border-radius: 8px;
-
+    width: 190px;
+    height: 32px;
+    border-radius: 7px;
     background: #d9d0c2;
-
-    box-shadow: 0 12px 25px rgba(0,0,0,.13);
 }
 
-
 .livro-1 {
-    bottom: 40px;
-
-    left: 50px;
-
+    bottom: 35px;
+    left: 30px;
     transform: rotate(-4deg);
 }
 
-
 .livro-2 {
-    bottom: 15px;
-
-    left: 85px;
-
+    bottom: 10px;
+    left: 65px;
     transform: rotate(4deg);
 }
 
-
 .planta {
     position: absolute;
-
-    width: 90px;
-    height: 90px;
-
+    width: 70px;
+    height: 70px;
     border-radius: 70% 20% 70% 20%;
-
-    border: 3px solid rgba(255,255,255,.35);
-
-    right: 80px;
-
-    bottom: 55px;
-
+    border: 3px solid rgba(255,255,255,.3);
+    right: 60px;
+    bottom: 35px;
     transform: rotate(-35deg);
 }
 
-
 .login-area {
     background: var(--fundo);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    padding: 40px;
+    padding: 35px;
 }
 
-
 .login-card {
-    width: min(430px, 100%);
-
+    width: min(410px, 100%);
     background: var(--branco);
-
     border: 1px solid var(--linha);
-
-    border-radius: 20px;
-
-    padding: 42px;
-
+    border-radius: 16px;
+    padding: 35px;
     box-shadow: var(--sombra);
 }
 
-
-.marca-mobile {
-    display: none;
-}
-
-
 .login-card h2 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 31px;
-
+    font-family: Georgia, serif;
+    font-size: 29px;
     margin: 8px 0;
 }
 
-
 .descricao-login {
     color: var(--cinza);
-
     font-size: 13px;
-
-    margin-bottom: 28px;
-
+    margin-bottom: 25px;
     line-height: 1.5;
 }
 
-
 .tag {
     color: var(--verde-escuro);
-
     font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.8px;
+    font-weight: bold;
+    letter-spacing: 1.7px;
 }
-
 
 .campo {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
-
 
 .campo label {
     display: block;
-
     font-size: 12px;
-
-    font-weight: 600;
-
+    font-weight: bold;
     margin-bottom: 7px;
 }
 
-
 .campo input {
     width: 100%;
-
-    height: 46px;
-
+    height: 44px;
     border: 1px solid var(--linha);
-
     background: #fffefa;
-
-    border-radius: 10px;
-
-    padding: 0 13px;
-
+    border-radius: 9px;
+    padding: 0 12px;
     outline: none;
-
     color: var(--texto);
 }
-
 
 .campo input:focus {
     border-color: var(--verde);
 }
 
-
 .senha-container {
     position: relative;
 }
-
 
 .senha-container input {
     padding-right: 45px;
 }
 
-
 .senha-container button {
     position: absolute;
-
     right: 10px;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     border: none;
-
     background: transparent;
-
     color: var(--cinza);
-
     cursor: pointer;
 }
-
-
-.linha-login {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    margin-bottom: 22px;
-
-    font-size: 11px;
-}
-
-
-.lembrar {
-    display: flex;
-
-    align-items: center;
-
-    gap: 6px;
-}
-
-
-.esqueci {
-    border: none;
-
-    background: transparent;
-
-    color: var(--verde-escuro);
-
-    cursor: pointer;
-}
-
 
 .botao-principal {
     width: 100%;
-
-    height: 47px;
-
+    height: 45px;
     border: none;
-
-    border-radius: 10px;
-
+    border-radius: 9px;
     background: var(--verde);
-
     color: white;
-
-    font-weight: 700;
-
+    font-weight: bold;
     cursor: pointer;
-
     transition: .2s;
 }
 
-
 .botao-principal:hover {
     background: var(--verde-escuro);
-
-    transform: translateY(-1px);
 }
-
 
 .mensagem-login {
-    min-height: 42px;
-
+    width: 100%;
+    min-height: 20px;
     margin-top: 15px;
-
     padding: 11px;
-
     border-radius: 9px;
-
     font-size: 12px;
-
     display: none;
+    text-align: center;
 }
-
 
 .mensagem-login.erro {
     display: block;
-
     background: #f8e8e6;
-
     color: var(--vermelho);
-
     border: 1px solid #efd4d0;
 }
 
-
 .mensagem-login.sucesso {
     display: block;
-
     background: #e6eee5;
-
     color: var(--verde-escuro);
+    border: 1px solid #dce5d9;
 }
 
-
-.rodape-login {
+.cadastro-link {
     text-align: center;
-
     color: var(--cinza);
-
-    font-size: 11px;
-
-    margin-top: 22px;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
-
-/* ================= SISTEMA ================= */
+.cadastro-link a {
+    color: var(--verde-escuro);
+    font-weight: bold;
+}
 
 .topo {
-    height: 78px;
-
+    height: 72px;
     background: var(--branco);
-
     border-bottom: 1px solid var(--linha);
-
-    padding: 0 35px;
-
+    padding: 0 30px;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
-
 .marca {
     display: flex;
-
     align-items: center;
-
-    gap: 11px;
+    gap: 10px;
 }
-
 
 .marca .logo-simbolo {
     background: var(--verde);
-
     color: white;
 }
 
-
 .nome-sistema strong {
     display: block;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 23px;
+    font-family: Georgia, serif;
+    font-size: 21px;
 }
-
 
 .nome-sistema span {
     display: block;
-
     color: var(--cinza);
-
     font-size: 8px;
-
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
 }
-
 
 .perfil {
     display: flex;
-
     align-items: center;
-
-    gap: 14px;
+    gap: 12px;
 }
-
-
-.notificacao {
-    width: 35px;
-    height: 35px;
-
-    border: 1px solid var(--linha);
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: var(--cinza);
-}
-
 
 .dados-perfil {
     text-align: right;
 }
 
-
 .dados-perfil strong {
     display: block;
-
     font-size: 13px;
 }
 
-
 .dados-perfil span {
     color: var(--cinza);
-
     font-size: 11px;
 }
 
-
 .avatar {
-    width: 40px;
-    height: 40px;
-
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-
     background: var(--bege);
-
     color: var(--verde-escuro);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .estrutura {
-    min-height: calc(100vh - 78px);
-
+    min-height: calc(100vh - 72px);
     display: flex;
 }
-
 
 .menu-lateral {
-    width: 225px;
-
+    width: 210px;
     background: #eee9e1;
-
-    padding: 25px 16px;
-
+    padding: 22px 14px;
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
 }
-
 
 .menu-lateral nav,
 .menu-final {
     display: flex;
-
     flex-direction: column;
-
     gap: 5px;
 }
 
-
 .menu-link {
     display: flex;
-
     align-items: center;
-
-    gap: 13px;
-
-    padding: 12px 14px;
-
-    border-radius: 10px;
-
+    gap: 12px;
+    padding: 11px 13px;
+    border-radius: 9px;
     color: #6e6961;
-
     font-size: 13px;
-
     transition: .2s;
 }
 
-
 .menu-link span {
     width: 20px;
-
     text-align: center;
-
-    font-size: 16px;
+    font-size: 15px;
 }
-
 
 .menu-link:hover,
 .menu-link.ativo {
     background: #ddd6ca;
-
     color: var(--texto);
-
-    font-weight: 600;
+    font-weight: bold;
 }
-
 
 .conteudo {
     flex: 1;
-
-    padding: 42px;
-
-    max-width: 1500px;
+    padding: 35px;
+    max-width: 1400px;
 }
-
 
 .cabecalho-pagina {
     display: flex;
-
     justify-content: space-between;
-
     align-items: flex-start;
-
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 }
 
-
 .cabecalho-pagina h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 32px;
-
+    font-family: Georgia, serif;
+    font-size: 30px;
     margin: 5px 0;
 }
 
-
 .cabecalho-pagina p {
     color: var(--cinza);
-
     font-size: 13px;
 }
 
-
 .data {
     color: var(--cinza);
-
     font-size: 12px;
 }
 
 
-
-
 .cards-resumo {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
-    gap: 15px;
-
+    gap: 13px;
     margin-bottom: 20px;
 }
 
-
 .card-resumo {
     background: var(--branco);
-
     border: 1px solid var(--linha);
-
-    border-radius: 15px;
-
-    padding: 19px;
-
+    border-radius: 13px;
+    padding: 17px;
     display: flex;
-
     align-items: center;
-
-    gap: 13px;
-
+    gap: 12px;
     transition: .2s;
 }
 
-
 .card-resumo:hover {
-    transform: translateY(-3px);
-
+    transform: translateY(-2px);
     box-shadow: var(--sombra);
 }
 
-
 .icone-card {
-    width: 41px;
-    height: 41px;
-
-    border-radius: 12px;
-
+    width: 39px;
+    height: 39px;
+    border-radius: 10px;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .verde {
     background: #e1e9df;
-
     color: var(--verde-escuro);
 }
 
-
 .bege {
     background: #eee5d8;
-
     color: #806d55;
 }
 
-
 .areia {
     background: #e7dfd4;
-
     color: #70685e;
 }
 
-
 .cinza {
     background: #e5e2dc;
-
     color: #625e58;
 }
 
-
 .card-resumo span {
     display: block;
-
     color: var(--cinza);
-
     font-size: 11px;
 }
 
-
 .card-resumo strong {
     display: block;
-
-    font-size: 20px;
-
+    font-size: 19px;
     margin: 3px 0;
 }
 
-
 .card-resumo small {
     color: var(--cinza);
-
     font-size: 9px;
 }
 
@@ -802,595 +495,351 @@ select {
 
 .paineis {
     display: grid;
-
-    grid-template-columns: 1.35fr 1fr;
-
-    gap: 18px;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
 }
-
 
 .painel {
     background: var(--branco);
-
     border: 1px solid var(--linha);
-
-    border-radius: 17px;
-
-    padding: 23px;
+    border-radius: 15px;
+    padding: 21px;
 }
-
 
 .cabecalho-painel {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 
-
 .cabecalho-painel h2 {
-    font-size: 18px;
-
+    font-size: 17px;
     margin-top: 4px;
 }
 
-
 .cabecalho-painel a {
     color: var(--verde-escuro);
-
     font-size: 11px;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .atividade {
     display: flex;
-
     align-items: center;
-
-    gap: 13px;
-
+    gap: 12px;
     border-top: 1px solid var(--linha);
-
-    padding: 14px 0;
+    padding: 13px 0;
 }
 
-
 .data-atividade {
-    width: 44px;
-    height: 45px;
-
+    width: 43px;
+    height: 43px;
     border: 1px solid var(--linha);
-
-    border-radius: 9px;
-
+    border-radius: 8px;
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
 }
 
-
 .data-atividade strong {
-    font-size: 16px;
+    font-size: 15px;
 }
-
 
 .data-atividade span {
     font-size: 8px;
-
     color: var(--cinza);
 }
-
 
 .informacao-atividade {
     flex: 1;
 }
 
-
 .informacao-atividade strong {
     display: block;
-
     font-size: 13px;
 }
 
-
 .informacao-atividade span {
     display: block;
-
     color: var(--cinza);
-
     font-size: 11px;
-
     margin-top: 3px;
 }
 
-
 .status {
     padding: 5px 9px;
-
     border-radius: 20px;
-
     font-size: 9px;
-
     white-space: nowrap;
 }
 
-
 .pendente {
     background: #f0e4d2;
-
     color: #806b4d;
 }
 
-
 .entregue {
     background: #e1eae0;
-
     color: #56705b;
 }
 
 
-
-
-.aviso {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 14px 0;
-
-    border-top: 1px solid var(--linha);
-}
-
-
-.icone-aviso {
-    width: 34px;
-    height: 34px;
-
-    border-radius: 50%;
-
-    background: #e8e1d7;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: var(--verde-escuro);
-
-    font-weight: 700;
-}
-
-
-.aviso strong {
-    font-size: 13px;
-}
-
-
-.aviso p {
-    color: var(--cinza);
-
-    font-size: 10px;
-
-    margin-top: 3px;
-
-    line-height: 1.4;
-}
-
-
-
-
 .filtros {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
-
 
 .filtro-botoes {
     display: flex;
-
-    gap: 5px;
-
+    gap: 4px;
     background: #e9e3da;
-
     padding: 4px;
-
-    border-radius: 9px;
+    border-radius: 8px;
 }
-
 
 .filtro {
     border: none;
-
     background: transparent;
-
-    padding: 8px 15px;
-
-    border-radius: 7px;
-
+    padding: 7px 13px;
+    border-radius: 6px;
     color: var(--cinza);
-
     font-size: 11px;
+    cursor: pointer;
 }
-
 
 .filtro.ativo {
     background: var(--branco);
-
     color: var(--texto);
-
-    font-weight: 700;
-
-    box-shadow: 0 2px 7px rgba(0,0,0,.04);
+    font-weight: bold;
 }
-
 
 .pesquisa {
     display: flex;
-
     border: 1px solid var(--linha);
-
     background: var(--branco);
-
-    border-radius: 9px;
-
+    border-radius: 8px;
     overflow: hidden;
 }
 
-
 .pesquisa input {
-    width: 210px;
-
-    height: 37px;
-
+    width: 200px;
+    height: 36px;
     border: none;
-
     outline: none;
-
-    padding: 0 12px;
-
+    padding: 0 11px;
     font-size: 11px;
-
     background: transparent;
 }
-
 
 .pesquisa button {
-    width: 40px;
-
+    width: 38px;
     border: none;
-
     background: transparent;
-
     color: var(--cinza);
+    cursor: pointer;
 }
-
-
-
 
 .lista-atividades {
     background: var(--branco);
-
     border: 1px solid var(--linha);
-
-    border-radius: 17px;
-
-    padding: 5px 22px;
+    border-radius: 15px;
+    padding: 5px 20px;
 }
-
 
 .atividade-completa {
     display: flex;
-
     align-items: center;
-
-    gap: 17px;
-
-    padding: 18px 0;
-
+    gap: 15px;
+    padding: 17px 0;
     border-bottom: 1px solid var(--linha);
 }
-
 
 .atividade-completa:last-child {
     border-bottom: none;
 }
 
-
 .icone-materia {
-    width: 43px;
-    height: 43px;
-
-    border-radius: 11px;
-
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .historia {
     background: #eee1e0;
-
     color: #8a5e5a;
 }
 
-
 .matematica {
     background: #e1e8e8;
-
     color: #597272;
 }
 
-
 .fisica {
     background: #e3eadf;
-
     color: #5f765e;
 }
 
-
 .portugues {
     background: #eee6d9;
-
     color: #7c6b53;
 }
-
 
 .dados-atividade-completa {
     flex: 1;
 }
 
-
 .dados-atividade-completa strong {
     display: block;
-
     font-size: 13px;
 }
 
-
 .dados-atividade-completa span {
     color: var(--cinza);
-
     font-size: 11px;
-
     margin-top: 4px;
-
     display: block;
 }
 
-
 .prazo {
-    min-width: 110px;
+    min-width: 100px;
 }
-
 
 .prazo small {
     display: block;
-
     color: var(--cinza);
-
     font-size: 8px;
-
-    letter-spacing: 1px;
 }
-
 
 .prazo strong {
     font-size: 11px;
 }
 
-
 .botao-ver {
     border: none;
-
     background: var(--verde);
-
     color: white;
-
-    padding: 9px 13px;
-
-    border-radius: 8px;
-
+    padding: 8px 11px;
+    border-radius: 7px;
     font-size: 10px;
-
-    font-weight: 600;
+    font-weight: bold;
+    cursor: pointer;
 }
-
 
 .botao-ver:hover {
     background: var(--verde-escuro);
 }
 
 
-
 .seletor-bimestre {
     border: 1px solid var(--linha);
-
     background: var(--branco);
-
-    padding: 9px 13px;
-
-    border-radius: 9px;
-
+    padding: 8px 12px;
+    border-radius: 8px;
     color: var(--texto);
-
     outline: none;
-
     font-size: 11px;
 }
 
-
 .tabela-notas {
     background: var(--branco);
-
     border: 1px solid var(--linha);
-
-    border-radius: 17px;
-
+    border-radius: 15px;
     overflow: hidden;
 }
 
-
 .linha-nota {
     display: grid;
-
     grid-template-columns: 2fr 1fr 1fr 1fr;
-
     align-items: center;
-
-    padding: 17px 23px;
-
+    padding: 16px 21px;
     border-bottom: 1px solid var(--linha);
-
     font-size: 12px;
 }
-
 
 .linha-nota:last-child {
     border-bottom: none;
 }
 
-
 .cabecalho-nota {
     background: #eee9e1;
-
     color: var(--cinza);
-
     font-size: 10px;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .media {
-    font-size: 16px;
-
-    color: var(--texto);
+    font-size: 15px;
 }
-
 
 .mensagem-desempenho {
-    margin-top: 18px;
-
+    margin-top: 17px;
     background: #e8eee5;
-
     border: 1px solid #dce5d9;
-
-    border-radius: 14px;
-
-    padding: 18px 22px;
-
+    border-radius: 13px;
+    padding: 16px 20px;
     display: flex;
-
     align-items: center;
-
-    gap: 13px;
+    gap: 12px;
 }
-
 
 .icone-desempenho {
-    width: 38px;
-    height: 38px;
-
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-
     background: #dce7d9;
-
     color: var(--verde-escuro);
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 .mensagem-desempenho div:nth-child(2) {
     flex: 1;
 }
 
-
 .mensagem-desempenho strong {
     font-size: 12px;
 }
 
-
 .mensagem-desempenho p {
     color: var(--cinza);
-
     font-size: 10px;
-
     margin-top: 3px;
 }
 
-
 .trofeu {
-    font-size: 25px;
-
-    color: #927b45;
+    font-size: 23px;
 }
-
-
 
 
 .notificacao-sistema {
     position: fixed;
-
-    right: 25px;
-
-    bottom: 25px;
-
+    right: 22px;
+    bottom: 22px;
     background: #302f2b;
-
     color: white;
-
-    padding: 13px 18px;
-
-    border-radius: 10px;
-
+    padding: 12px 17px;
+    border-radius: 9px;
     font-size: 12px;
-
     opacity: 0;
-
-    transform: translateY(15px);
-
+    transform: translateY(10px);
     pointer-events: none;
-
     transition: .25s;
 }
 
-
 .notificacao-sistema.mostrar {
     opacity: 1;
-
     transform: translateY(0);
 }
-
-
 
 
 @media (max-width: 1050px) {
@@ -1399,13 +848,11 @@ select {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
     .paineis {
         grid-template-columns: 1fr;
     }
 
 }
-
 
 @media (max-width: 750px) {
 
@@ -1413,60 +860,36 @@ select {
         grid-template-columns: 1fr;
     }
 
-
     .login-apresentacao {
         display: none;
     }
-
 
     .menu-lateral {
         width: 70px;
     }
 
-
     .menu-link {
         justify-content: center;
-    }
-
-
-    .menu-link:not(.ativo) {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-    .menu-link {
         font-size: 0;
     }
-
 
     .menu-link span {
         font-size: 17px;
     }
 
-
     .conteudo {
         padding: 25px 18px;
     }
 
-
-    .dados-perfil,
-    .notificacao {
+    .dados-perfil {
         display: none;
     }
-
 
     .atividade-completa {
         flex-wrap: wrap;
     }
 
-
-    .prazo {
-        min-width: 90px;
-    }
-
 }
-
 
 @media (max-width: 520px) {
 
@@ -1474,36 +897,26 @@ select {
         grid-template-columns: 1fr;
     }
 
-
     .filtros {
         flex-direction: column;
-
         align-items: stretch;
-
-        gap: 12px;
+        gap: 10px;
     }
-
 
     .pesquisa input {
         width: 100%;
     }
 
-
     .cabecalho-pagina {
         flex-direction: column;
-
-        gap: 12px;
+        gap: 10px;
     }
-
 
     .linha-nota {
         grid-template-columns: 1.5fr 1fr 1fr 1fr;
-
-        padding: 15px 10px;
-
+        padding: 14px 9px;
         font-size: 10px;
     }
-
 
     .login-card {
         padding: 28px 22px;
