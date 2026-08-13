@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VivaEdu | Cadastro</title>
+
+    <link rel="stylesheet" href="VivaEdu.css">
+</head>
+
+<body class="pagina-login">
+
+    <main class="login-container">
+
+        <section class="login-apresentacao">
+
+            <div class="logo-login">
+
+                <div class="logo-simbolo">
+                    V
+                </div>
+
+                <div>
+                    <strong>VivaEdu</strong>
+                    <span>SISTEMA ESCOLAR</span>
+                </div>
+
+            </div>
+
+
+            <div class="texto-apresentacao">
+
+                <span>PORTAL EDUCACIONAL</span>
+
+                <h1>
+                    Crie sua conta
+                    escolar.
+                </h1>
+
+                <p>
+                    Cadastre seus dados para
+                    acessar o sistema VivaEdu.
+                </p>
+
+            </div>
+
+
+            <div class="ilustracao">
+
+                <div class="livro livro-1"></div>
+                <div class="livro livro-2"></div>
+                <div class="planta"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="login-area">
+
+            <div class="login-card">
+
+                <span class="tag">
+                    NOVA CONTA
+                </span>
+
+                <h2>
+                    Criar conta
+                </h2>
+
+                <p class="descricao-login">
+                    Preencha seus dados para continuar.
+                </p>
+
+
+                <form id="formCadastro">
+
+
+                    <div class="campo">
+
+                        <label for="nomeCadastro">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nomeCadastro"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="emailCadastro">
+                            E-mail escolar
+                        </label>
+
+                        <input
+                            type="email"
+                            id="emailCadastro"
+                            placeholder="seunome@escola.pr.gov.br"
+                            autocomplete="off"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senhaCadastro">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senhaCadastro"
+                            placeholder="Digite 6 números"
+                            maxlength="6"
+                            minlength="6"
+                            inputmode="numeric"
+                            pattern="[0-9]{6}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            placeholder="Digite a senha novamente"
+                            maxlength="6"
+                            minlength="6"
+                            inputmode="numeric"
+                            pattern="[0-9]{6}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                    >
+                        Criar conta
+                    </button>
+
+
+                    <div
+                        id="mensagemCadastro"
+                        class="mensagem-login"
+                    ></div>
+
+
+                </form>
+
+
+                <p class="cadastro-link">
+
+                    Já possui uma conta?
+
+                    <a href="VivaEdu.html">
+                        Voltar para login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="VivaEdu.js"></script>
+
+</body>
+
+</html>
