@@ -30,14 +30,10 @@
 
         <div class="perfil">
 
-            <div class="notificacao">
-                ♧
-            </div>
-
             <div class="dados-perfil">
 
                 <strong id="nomeUsuario">
-                    Clara Calonassi
+                    Aluno
                 </strong>
 
                 <span>
@@ -46,12 +42,11 @@
 
             </div>
 
-
             <div
                 class="avatar"
                 id="avatar"
             >
-                C
+                A
             </div>
 
         </div>
@@ -73,7 +68,6 @@
                     Início
                 </a>
 
-
                 <a
                     href="Vatividades.html"
                     class="menu-link"
@@ -81,7 +75,6 @@
                     <span>▣</span>
                     Atividades
                 </a>
-
 
                 <a
                     href="Vnotas.html"
@@ -91,45 +84,15 @@
                     Notas
                 </a>
 
-
-                <a
-                    href="#"
-                    class="menu-link"
-                    onclick="mostrarAviso('Página de frequência em desenvolvimento.')"
-                >
-                    <span>✓</span>
-                    Frequência
-                </a>
-
-
-                <a
-                    href="#"
-                    class="menu-link"
-                    onclick="mostrarAviso('Página de avisos em desenvolvimento.')"
-                >
-                    <span>!</span>
-                    Avisos
-                </a>
-
             </nav>
 
 
             <div class="menu-final">
 
                 <a
-                    href="#"
-                    class="menu-link"
-                    onclick="mostrarAviso('Configurações disponíveis em breve.')"
-                >
-                    <span>⚙</span>
-                    Configurações
-                </a>
-
-
-                <a
                     href="VivaEdu.html"
                     class="menu-link"
-                    onclick="sairSistema()"
+                    onclick="sair()"
                 >
                     <span>↪</span>
                     Sair
@@ -142,7 +105,6 @@
 
         <main class="conteudo">
 
-
             <section class="cabecalho-pagina">
 
                 <div>
@@ -154,7 +116,7 @@
                     <h1>
                         Olá,
                         <span id="nomeSaudacao">
-                        Clara
+                            aluno
                         </span>!
                     </h1>
 
@@ -174,7 +136,6 @@
 
 
             <section class="cards-resumo">
-
 
                 <a
                     href="Vnotas.html"
@@ -205,35 +166,6 @@
 
 
                 <a
-                    href="#"
-                    class="card-resumo"
-                    onclick="mostrarAviso('Sua frequência geral é de 92%.')"
-                >
-
-                    <div class="icone-card bege">
-                        ✓
-                    </div>
-
-                    <div>
-
-                        <span>
-                            Frequência
-                        </span>
-
-                        <strong>
-                            92%
-                        </strong>
-
-                        <small>
-                            8 faltas registradas
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <a
                     href="Vatividades.html"
                     class="card-resumo"
                 >
@@ -248,8 +180,8 @@
                             Atividades
                         </span>
 
-                        <strong>
-                            3
+                        <strong id="quantidadePendentes">
+                            2
                         </strong>
 
                         <small>
@@ -261,39 +193,59 @@
                 </a>
 
 
-                <a
-                    href="#"
-                    class="card-resumo"
-                    onclick="mostrarAviso('Você possui 2 novos avisos.')"
-                >
+                <div class="card-resumo">
 
-                    <div class="icone-card cinza">
-                        !
+                    <div class="icone-card bege">
+                        ✓
                     </div>
 
                     <div>
 
                         <span>
-                            Avisos
+                            Disciplinas
                         </span>
 
                         <strong>
-                            2
+                            6
                         </strong>
 
                         <small>
-                            novos comunicados
+                            cadastradas
                         </small>
 
                     </div>
 
-                </a>
+                </div>
+
+
+                <div class="card-resumo">
+
+                    <div class="icone-card cinza">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Melhor média
+                        </span>
+
+                        <strong>
+                            9,2
+                        </strong>
+
+                        <small>
+                            Inglês
+                        </small>
+
+                    </div>
+
+                </div>
 
             </section>
 
 
             <section class="paineis">
-
 
                 <div class="painel">
 
@@ -312,7 +264,7 @@
                         </div>
 
                         <a href="Vatividades.html">
-                            Ver todas →
+                            Ver atividades →
                         </a>
 
                     </div>
@@ -332,7 +284,6 @@
 
                         </div>
 
-
                         <div class="informacao-atividade">
 
                             <strong>
@@ -345,7 +296,6 @@
 
                         </div>
 
-
                         <span class="status pendente">
                             Pendente
                         </span>
@@ -353,7 +303,7 @@
                     </div>
 
 
-                    <div class="Vatividades">
+                    <div class="atividade">
 
                         <div class="data-atividade">
 
@@ -367,7 +317,6 @@
 
                         </div>
 
-
                         <div class="informacao-atividade">
 
                             <strong>
@@ -379,7 +328,6 @@
                             </span>
 
                         </div>
-
 
                         <span class="status pendente">
                             Pendente
@@ -402,7 +350,6 @@
 
                         </div>
 
-
                         <div class="informacao-atividade">
 
                             <strong>
@@ -414,7 +361,6 @@
                             </span>
 
                         </div>
-
 
                         <span class="status entregue">
                             Entregue
@@ -432,85 +378,53 @@
                         <div>
 
                             <span class="tag">
-                                COMUNICADOS
+                                DESEMPENHO
                             </span>
 
                             <h2>
-                                Avisos recentes
+                                Resumo escolar
                             </h2>
 
                         </div>
 
-                        <a
-                            href="#"
-                            onclick="mostrarAviso('Você está vendo todos os avisos.')"
-                        >
-                            Ver todos →
-                        </a>
+                    </div>
+
+
+                    <div class="resumo-item">
+
+                        <span>
+                            Média geral
+                        </span>
+
+                        <strong>
+                            8,7
+                        </strong>
 
                     </div>
 
 
-                    <div class="aviso">
+                    <div class="resumo-item">
 
-                        <div class="icone-aviso">
-                            !
-                        </div>
+                        <span>
+                            Melhor disciplina
+                        </span>
 
-                        <div>
-
-                            <strong>
-                                Reunião de pais
-                            </strong>
-
-                            <p>
-                                Confira as informações
-                                divulgadas pela escola.
-                            </p>
-
-                        </div>
+                        <strong>
+                            Inglês
+                        </strong>
 
                     </div>
 
 
-                    <div class="aviso">
+                    <div class="resumo-item">
 
-                        <div class="icone-aviso">
-                            □
-                        </div>
+                        <span>
+                            Atividades entregues
+                        </span>
 
-                        <div>
-
-                            <strong>
-                                Feira de Ciências
-                            </strong>
-
-                            <p>
-                                Inscrições abertas até sexta-feira.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="aviso">
-
-                        <div class="icone-aviso">
-                            ✓
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                Calendário escolar
-                            </strong>
-
-                            <p>
-                                Confira as próximas datas importantes.
-                            </p>
-
-                        </div>
+                        <strong>
+                            2
+                        </strong>
 
                     </div>
 
