@@ -203,6 +203,7 @@ function marcarEntregue(botao) {
     atividade.setAttribute("data-status", "entregue");
 
     const status = atividade.querySelector(".status");
+
     status.textContent = "Entregue";
     status.classList.remove("pendente");
     status.classList.add("entregue");
@@ -212,9 +213,22 @@ function marcarEntregue(botao) {
 
     salvarStatusAtividades();
 
+    const filtroAtivo = document.querySelector(".filtro.ativo");
+
+    if (filtroAtivo) {
+
+        if (filtroAtivo.textContent.includes("Pendentes")) {
+            filtrarAtividades("pendente", filtroAtivo);
+        } else if (filtroAtivo.textContent.includes("Entregues")) {
+            filtrarAtividades("entregue", filtroAtivo);
+        } else {
+            filtrarAtividades("todas", filtroAtivo);
+        }
+
+    }
+
     mostrarAviso("Atividade marcada como entregue!");
 }
-
 function salvarStatusAtividades() {
 
     const atividades = document.querySelectorAll(".atividade-completa");
