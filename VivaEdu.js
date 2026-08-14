@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     configurarMostrarSenha();
     carregarUsuario();
     mostrarData();
+    carregarStatusAtividades();
 
 });
 
@@ -193,4 +194,80 @@ function sairSistema() {
 
 function sair() {
     sairSistema();
+}
+
+function marcarEntregue(botao) {
+
+    const atividade = botao.closest(".atividade-completa");
+
+    atividade.setAttribute("data-status", "entregue");
+
+    const status = atividade.querySelector(".status");
+    status.textContent = "Entregue";
+    status.classList.remove("pendente");
+    status.classList.add("entregue");
+
+    botao.textContent = "Entregue ✔";
+    botao.disabled = true;
+
+    salvarStatusAtividades();
+
+    mostrarAviso("Atividade marcada como entregue!");
+}
+
+function salvarStatusAtividades() {
+
+    const atividades = document.querySelectorAll(".atividade-completa");
+    const estados = [];
+
+    atividades.forEach(function (atividade) {
+        estados.push(atividade.getAttribute("data-status"));
+    });
+
+    localStorage.setItem("statusAtividades", JSON.stringify(estados));
+}
+
+function carregarStatusAtividades() {
+
+    const dados = JSON.parse(localStorage.getItem("statusAtividades"));
+
+    if (!dados) return;
+
+    const atividades = document.querySelectorAll(".atividade-completa");
+
+    atividades.forEach(function (atividade, indice) {
+
+        if (dados[indice] === "entregue") {
+
+            atividade.setAttribute("data-status", "entregue");
+
+            const status = atividade.querySelector(".status");
+            status.textContent = "Entregue";
+            status.classList.remove("pendente");
+            status.classList.add("entregue");
+
+            const botao = atividade.querySelector(".botao-ver");
+            botao.textContent = "Entregue ✔";
+            botao.disabled = true;
+        }
+
+    });
+
+}
+
+function mostrarAviso(mensagem) {
+
+    const aviso = document.getElementById("notificacaoSistema");
+
+    if (!aviso) {
+        alert(mensagem);
+        return;
+    }
+
+    aviso.textContent = mensagem;
+    aviso.classList.add("mostrar");
+
+    setTimeout(function () {
+        aviso.classList.remove("mostrar");
+    }, 2500);
 }
