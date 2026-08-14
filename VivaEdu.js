@@ -1,169 +1,271 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+document.addEventListener("DOMContentLoaded", function () {
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivaEdu | Atividades</title>
-    <link rel="stylesheet" href="VivaEdu.css">
-</head>
+    configurarLogin();
+    configurarCadastro();
+    configurarMostrarSenha();
+    carregarUsuario();
+    mostrarData();
+    carregarStatusAtividades();
 
-<body>
+});
 
-    <header class="topo">
-        <div class="marca">
-            <div class="logo-simbolo">V</div>
-            <div class="nome-sistema">
-                <strong>VivaEdu</strong>
-                <span>SISTEMA ESCOLAR</span>
-            </div>
-        </div>
 
-        <div class="perfil">
-            <div class="dados-perfil">
-                <strong id="nomeUsuario">Aluno</strong>
-                <span>Aluno</span>
-            </div>
-            <div class="avatar" id="avatar">A</div>
-        </div>
-    </header>
 
-    <div class="estrutura">
+function configurarLogin() {
 
-        <aside class="menu-lateral">
-            <nav>
-                <a href="Vinicio.html" class="menu-link">
-                    <span>⌂</span> Início
-                </a>
-                <a href="Vatividades.html" class="menu-link ativo">
-                    <span>▣</span> Atividades
-                </a>
-                <a href="Vnotas.html" class="menu-link">
-                    <span>★</span> Notas
-                </a>
-            </nav>
+    const formulario = document.getElementById("formLogin");
 
-            <div class="menu-final">
-                <a href="VivaEdu.html" class="menu-link" onclick="sair()">
-                    <span>↪</span> Sair
-                </a>
-            </div>
-        </aside>
+    if (!formulario) return;
 
-        <main class="conteudo">
+    formulario.addEventListener("submit", function (event) {
 
-            <section class="cabecalho-pagina">
-                <div>
-                    <span class="tag">ESTUDOS</span>
-                    <h1>Minhas atividades</h1>
-                    <p>Acompanhe suas tarefas e prazos.</p>
-                </div>
-            </section>
+        event.preventDefault();
 
-            <section class="filtros">
-                <div class="filtro-botoes">
-                    <button class="filtro ativo" onclick="filtrarAtividades('todas', this)">
-                        Todas
-                    </button>
-                    <button class="filtro" onclick="filtrarAtividades('pendente', this)">
-                        Pendentes
-                    </button>
-                    <button class="filtro" onclick="filtrarAtividades('entregue', this)">
-                        Entregues
-                    </button>
-                </div>
+        const email = document.getElementById("email").value.trim().toLowerCase();
+        const senha = document.getElementById("senha").value.trim();
+        const mensagem = document.getElementById("mensagemLogin");
 
-                <div class="pesquisa">
-                    <input type="text" id="pesquisaAtividade" placeholder="Buscar atividade..." onkeyup="buscarAtividade()">
-                    <button type="button" onclick="buscarAtividade()">⌕</button>
-                </div>
-               <div>
-                <button class="botao-ver" onclick="marcarEntregue(this)">
-    Marcar entregue
-              </button>
-              </div>
-            
-            </section>
+        mensagem.textContent = "";
+        mensagem.className = "mensagem-login";
 
-            <section class="lista-atividades" id="listaAtividades">
+        // E-mail fixo
+        const emailCorreto = "claracalonassi@escola.pr.gov.br";
+        const senhaValida = /^[0-9]{6}$/.test(senha);
 
-                <article class="atividade-completa" data-status="pendente">
-    <div class="icone-materia historia">H</div>
+        if (email === emailCorreto && senhaValida) {
 
-    <div class="dados-atividade-completa">
-        <strong>Trabalho de História</strong>
-        <span>Revolução Industrial</span>
-    </div>
+            localStorage.setItem("vivaeduUsuario", JSON.stringify({
+                nome: "Clara Calonassi",
+                email: emailCorreto
+            }));
 
-    <div class="prazo">
-        <small>ENTREGA</small>
-        <strong>14/08/2026</strong>
-    </div>
+            mensagem.textContent = "Login realizado com sucesso!";
+            mensagem.className = "mensagem-login sucesso";
 
-    <span class="status pendente">Pendente</span>
+            setTimeout(function () {
+                window.location.href = "Vinicio.html";
+            }, 600);
 
-    <button class="botao-ver" onclick="marcarEntregue(this)">
-        Marcar entregue
-    </button>
-</article>
+        } else {
+            mensagem.textContent = "E-mail ou senha incorretos!";
+            mensagem.className = "mensagem-login erro";
+        }
+    });
+}
 
-                <article class="atividade-completa" data-status="pendente">
-                    <div class="icone-materia matematica">M</div>
-                    <div class="dados-atividade-completa">
-                        <strong>Lista de Matemática</strong>
-                        <span>Funções e gráficos</span>
-                    </div>
-                    <div class="prazo">
-                        <small>ENTREGA</small>
-                        <strong>16/08/2026</strong>
-                    </div>
-                    <span class="status pendente">Pendente</span>
-                    <button class="botao-ver" onclick="marcarEntregue(this)">
-                        Marcar entregue
-                    </button>
-                </article>
 
-                <article class="atividade-completa" data-status="entregue">
-                    <div class="icone-materia fisica">F</div>
-                    <div class="dados-atividade-completa">
-                        <strong>Projeto de Física</strong>
-                        <span>Pesquisa e apresentação</span>
-                    </div>
-                    <div class="prazo">
-                        <small>ENTREGA</small>
-                        <strong>20/08/2026</strong>
-                    </div>
-                    <span class="status entregue">Entregue</span>
-                    <button class="botao-ver" onclick="mostrarAviso('Esta atividade já foi entregue.')">
-                        Ver status
-                    </button>
-                </article>
 
-                <article class="atividade-completa" data-status="entregue">
-                    <div class="icone-materia portugues">P</div>
-                    <div class="dados-atividade-completa">
-                        <strong>Leitura de Português</strong>
-                        <span>Interpretação de texto</span>
-                    </div>
-                    <div class="prazo">
-                        <small>ENTREGA</small>
-                        <strong>28/08/2026</strong>
-                    </div>
-                    <span class="status entregue">Entregue</span>
-                    <button class="botao-ver" onclick="mostrarAviso('Esta atividade já foi entregue.')">
-                        Ver status
-                    </button>
-                </article>
+function configurarCadastro() {
 
-            </section>
+    const formulario = document.getElementById("formCadastro");
 
-        </main>
+    if (!formulario) return;
 
-    </div>
+    formulario.addEventListener("submit", function (event) {
 
-    <div id="notificacaoSistema" class="notificacao-sistema"></div>
+        event.preventDefault();
 
-    <script src="VivaEdu.js"></script>
-</body>
+        const nome = document.getElementById("nomeCadastro").value.trim();
+        const email = document.getElementById("emailCadastro").value.trim().toLowerCase();
+        const senha = document.getElementById("senhaCadastro").value.trim();
+        const confirmarSenha = document.getElementById("confirmarSenha").value.trim();
+        const mensagem = document.getElementById("mensagemCadastro");
 
-</html>
+        mensagem.textContent = "";
+        mensagem.className = "mensagem-login";
+
+        // Campos vazios
+        if (!nome || !email || !senha || !confirmarSenha) {
+            mensagem.textContent = "Preencha todos os campos.";
+            mensagem.className = "mensagem-login erro";
+            return;
+        }
+
+        // E-mail escolar
+        if (!/^[^\s@]+@escola\.pr\.gov\.br$/i.test(email)) {
+            mensagem.textContent = "E-mail incorreto! Use um e-mail @escola.pr.gov.br.";
+            mensagem.className = "mensagem-login erro";
+            return;
+        }
+
+        // Senha 6 dígitos
+        if (!/^[0-9]{6}$/.test(senha)) {
+            mensagem.textContent = "Senha incorreta! Digite exatamente 6 números.";
+            mensagem.className = "mensagem-login erro";
+            return;
+        }
+
+        // Confirmar senha
+        if (senha !== confirmarSenha) {
+            mensagem.textContent = "As senhas não são iguais.";
+            mensagem.className = "mensagem-login erro";
+            return;
+        }
+
+        // Salvar conta
+        localStorage.setItem("vivaeduConta", JSON.stringify({
+            nome: nome,
+            email: email,
+            senha: senha
+        }));
+
+        // Deixar logado
+        localStorage.setItem("vivaeduUsuario", JSON.stringify({
+            nome: nome,
+            email: email
+        }));
+
+        mensagem.textContent = "Cadastro realizado com sucesso!";
+        mensagem.className = "mensagem-login sucesso";
+
+        setTimeout(function () {
+            window.location.href = "Vinicio.html";
+        }, 600);
+    });
+}
+
+
+
+
+function configurarMostrarSenha() {
+
+    const botao = document.getElementById("mostrarSenha");
+    const senha = document.getElementById("senha");
+
+    if (!botao || !senha) return;
+
+    botao.addEventListener("click", function () {
+        senha.type = senha.type === "password" ? "text" : "password";
+    });
+}
+
+
+
+function carregarUsuario() {
+
+    const usuarioSalvo = localStorage.getItem("vivaeduUsuario");
+    if (!usuarioSalvo) return;
+
+    try {
+        const usuario = JSON.parse(usuarioSalvo);
+
+        const nome = document.getElementById("nomeUsuario");
+        const saudacao = document.getElementById("nomeSaudacao");
+        const avatar = document.getElementById("avatar");
+
+        if (nome && usuario.nome) {
+            nome.textContent = usuario.nome;
+        }
+
+        if (saudacao && usuario.nome) {
+            saudacao.textContent = usuario.nome.split(" ")[0];
+        }
+
+        if (avatar && usuario.nome) {
+            avatar.textContent = usuario.nome.charAt(0).toUpperCase();
+        }
+
+    } catch (erro) {
+        console.log("Erro ao carregar usuário.");
+    }
+}
+
+
+
+function mostrarData() {
+
+    const elemento = document.getElementById("dataAtual");
+    if (!elemento) return;
+
+    const hoje = new Date();
+
+    elemento.textContent = hoje.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+    });
+}
+
+
+function sairSistema() {
+    localStorage.removeItem("vivaeduUsuario");
+    window.location.href = "VivaEdu.html";
+}
+
+function sair() {
+    sairSistema();
+}
+
+function marcarEntregue(botao) {
+
+    const atividade = botao.closest(".atividade-completa");
+
+    if (!atividade) return;
+
+    const status = atividade.querySelector(".status");
+
+    status.innerText = "Entregue";
+    status.className = "status entregue";
+
+    atividade.dataset.status = "entregue";
+
+    botao.innerText = "Entregue";
+    botao.disabled = true;
+}
+
+function salvarStatusAtividades() {
+
+    const atividades = document.querySelectorAll(".atividade-completa");
+    const estados = [];
+
+    atividades.forEach(function (atividade) {
+        estados.push(atividade.getAttribute("data-status"));
+    });
+
+    localStorage.setItem("statusAtividades", JSON.stringify(estados));
+}
+
+function carregarStatusAtividades() {
+
+    const dados = JSON.parse(localStorage.getItem("statusAtividades"));
+
+    if (!dados) return;
+
+    const atividades = document.querySelectorAll(".atividade-completa");
+
+    atividades.forEach(function (atividade, indice) {
+
+        if (dados[indice] === "entregue") {
+
+            atividade.setAttribute("data-status", "entregue");
+
+            const status = atividade.querySelector(".status");
+            status.textContent = "Entregue";
+            status.classList.remove("pendente");
+            status.classList.add("entregue");
+
+            const botao = atividade.querySelector(".botao-ver");
+            botao.textContent = "Entregue ✔";
+            botao.disabled = true;
+        }
+
+    });
+
+}
+
+function mostrarAviso(mensagem) {
+
+    const aviso = document.getElementById("notificacaoSistema");
+
+    if (!aviso) {
+        alert(mensagem);
+        return;
+    }
+
+    aviso.textContent = mensagem;
+    aviso.classList.add("mostrar");
+
+    setTimeout(function () {
+        aviso.classList.remove("mostrar");
+    }, 2500);
+}
